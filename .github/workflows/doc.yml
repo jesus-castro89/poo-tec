@@ -1,8 +1,5 @@
 name: docs
 
-permissions:
-  contents: write
-
 on:
   # trigger deployment on every push to main branch
   push:
@@ -21,7 +18,12 @@ jobs:
           fetch-depth: 0
 
       - name: Setup pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v2
+        with:
+          # choose pnpm version to use
+          version: 8
+          # install deps with pnpm
+          run_install: true
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -30,9 +32,6 @@ jobs:
           node-version: 22
           # cache deps for pnpm
           cache: pnpm
-
-      - name: Install deps
-        run: pnpm install --frozen-lockfile
 
       # run build script
       - name: Build VuePress site
