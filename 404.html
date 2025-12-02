@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content="VuePress 2.0.0-rc.26" />
+    <style>
+      :root {
+        --vp-c-bg: #fff;
+      }
+
+      [data-theme='dark'] {
+        --vp-c-bg: #1b1b1f;
+      }
+
+      html,
+      body {
+        background-color: var(--vp-c-bg);
+      }
+    </style>
+    <script>
+      const useChoice = localStorage.getItem('vuepress-color-scheme')
+      const systemStatus =
+        'matchMedia' in window
+          ? window.matchMedia('(prefers-color-scheme: dark)').matches
+          : false
+
+      if (useChoice === 'light') {
+        document.documentElement.dataset.theme = 'light'
+      } else if (useChoice === 'dark' || systemStatus) {
+        document.documentElement.dataset.theme = 'dark'
+      }
+    </script>
+    <title></title><meta name="description" content="">
+    <link rel="preload" href="/poo-tec/assets/style-COCOW6bI.css" as="style"><link rel="stylesheet" href="/poo-tec/assets/style-COCOW6bI.css">
+    <link rel="modulepreload" href="/poo-tec/assets/app-Bx_yuqNk.js"><link rel="modulepreload" href="/poo-tec/assets/404.html-DDAwMZgv.js">
+    <link rel="prefetch" href="/poo-tec/assets/index.html-BPGJJKgG.js" as="script"><link rel="prefetch" href="/poo-tec/assets/index.html-BOBifgES.js" as="script">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="vp-theme-container" vp-container data-v-e02dbe64><main class="page" data-v-e02dbe64><div vp-content data-v-e02dbe64><h1 data-v-e02dbe64>404</h1><blockquote data-v-e02dbe64>There&#39;s nothing here.</blockquote><a class="route-link" href="/poo-tec/" data-v-e02dbe64>Take me home</a></div></main></div><!--[--><!----><!--]--><!--]--></div>
+    <script type="module" src="/poo-tec/assets/app-Bx_yuqNk.js" defer></script>
+  </body>
+</html>
